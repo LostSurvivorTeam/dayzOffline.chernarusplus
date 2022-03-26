@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playerspawnpoints>
+    <!--
+        Spawn points settings for newly created player characters
+    -->
+    <fresh>
+        <!-- runtime parameters used when player is spawning -->
+        <spawn_params>
+            <!-- used to rate point against infected -->
+            <min_dist_infected>30.0</min_dist_infected>
+            <max_dist_infected>70.0</max_dist_infected>
+            <!-- used to rate point against other players -->
+            <min_dist_player>25.0</min_dist_player>
+            <max_dist_player>70.0</max_dist_player>
+            <!-- used to rate point against buildings -->
+            <min_dist_static>0.5</min_dist_static>
+            <max_dist_static>2.0</max_dist_static>
+        </spawn_params>
+
+        <!--
+            Generator parameters
+
+            Spawn points are generated around positions given inside <generator_posbubbles> element.
+            Around every position is created a rectangle with given dimensions.
+            This rectangle is then sampled for spawn point candidates in form of a grid.
+        -->
+        <generator_params>
+            <!--
+                Density is sample frequency of created rectangle.
+
+                example:                         example:
+                  density 4                        density 8
+
+                grid will look like this:        grid will look like this:
+
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  |     |     |     |     |        +--+--+--+--+--+--+--+--+
+                  |     |     |     |     |        |  |  |  |  |  |  |  |  |
+                  +-----+-----+-----+-----+        +--+--+--+--+--+--+--+--+
+
+                Every '+' represents a spawn point candidate.
+                Blank areas are space between each spawn point.
+                Width of each area is exaclty width / density.
+                Height of each area is exaclty height / density.
+            -->
+            <grid_density>8</grid_density>
+            <!-- total width of grid in metres -->
+            <grid_width>40.0</grid_width>
+            <!-- total height of grid in metres -->
+            <grid_height>40.0</grid_height>
+            <!--  minimum distance from buildings for valid spawn point -->
+            <min_dist_static>0.5</min_dist_static>
+            <!--  maximum distance from buildings used to rate valid spawn point -->
+            <max_dist_static>2.0</max_dist_static>
+            <!-- terrain slope limits for valid spawn point -->
+            <min_steepness>-45</min_steepness>
+            <max_steepness>45</max_steepness>
+        </generator_params>
+
+        <!-- centers for grids of spawn points -->
+        <generator_posbubbles>
+            <pos x="13206.58" z="10424.26" />
+            <pos x="13047.49" z="10409.04" />
+            <pos x="13012.65" z="10161.71" />
+            <pos x="12782.76" z="10184.55" />
+            <pos x="12999.86" z="9804.89" />
+            <pos x="12731.24" z="9507.99" />
+            <pos x="6130.27" z="2026.48" />
+            <pos x="6840.56" z="2527.02" />
+            <pos x="7076.91" z="2484.02" />
+            <pos x="7427.50" z="2594.16" />
+            <pos x="8054.16" z="2811.84" />  
+            <pos x="8291.34" z="2916.15" />
+            <pos x="9528.46" z="1787.87" />
+            <pos x="7076.91" z="2484.02" />
+            <pos x="10424.06" z="1923.93" />
+            <pos x="9193.42" z="1937.21" />   
+            <pos x="10181.92" z="1610.80" />
+            <pos x="10427.70" z="1921.46" />
+            <pos x="10644.47" z="2099.79" />
+            <pos x="10873.23" z="2518.64" />            
+            <pos x="14262.19" z="13030.67" />
+            <pos x="14326.35" z="13332.10" />            
+        </generator_posbubbles>
+    </fresh>
+
+    <!--
+        Spawn points settings for server hoppers
+    -->
+    <hop>
+        <generator_posbubbles>
+			<pos x="13206.58" z="10424.26" />
+            <pos x="13047.49" z="10409.04" />
+            <pos x="13012.65" z="10161.71" />
+            <pos x="12782.76" z="10184.55" />
+            <pos x="12999.86" z="9804.89" />
+            <pos x="12731.24" z="9507.99" />
+            <pos x="6130.27" z="2026.48" />
+            <pos x="6840.56" z="2527.02" />
+            <pos x="7076.91" z="2484.02" />
+            <pos x="7427.50" z="2594.16" />
+            <pos x="8054.16" z="2811.84" />  
+            <pos x="8291.34" z="2916.15" />
+            <pos x="9528.46" z="1787.87" />
+            <pos x="7076.91" z="2484.02" />
+            <pos x="10424.06" z="1923.93" />
+            <pos x="9193.42" z="1937.21" />   
+            <pos x="10181.92" z="1610.80" />
+            <pos x="10427.70" z="1921.46" />
+            <pos x="10644.47" z="2099.79" />
+            <pos x="10873.23" z="2518.64" />            
+            <pos x="14262.19" z="13030.67" />
+            <pos x="14326.35" z="13332.10" />            
+        </generator_posbubbles>
+    </hop>
+
+    <!--
+        Spawn points settings for travellers
+    -->
+    <travel>
+        <generator_posbubbles>
+			<pos x="13206.58" z="10424.26" />
+            <pos x="13047.49" z="10409.04" />
+            <pos x="13012.65" z="10161.71" />
+            <pos x="12782.76" z="10184.55" />
+            <pos x="12999.86" z="9804.89" />
+            <pos x="12731.24" z="9507.99" />
+            <pos x="6130.27" z="2026.48" />
+            <pos x="6840.56" z="2527.02" />
+            <pos x="7076.91" z="2484.02" />
+            <pos x="7427.50" z="2594.16" />
+            <pos x="8054.16" z="2811.84" />  
+            <pos x="8291.34" z="2916.15" />
+            <pos x="9528.46" z="1787.87" />
+            <pos x="7076.91" z="2484.02" />
+            <pos x="10424.06" z="1923.93" />
+            <pos x="9193.42" z="1937.21" />   
+            <pos x="10181.92" z="1610.80" />
+            <pos x="10427.70" z="1921.46" />
+            <pos x="10644.47" z="2099.79" />
+            <pos x="10873.23" z="2518.64" />            
+            <pos x="14262.19" z="13030.67" />
+            <pos x="14326.35" z="13332.10" />            
+        </generator_posbubbles>
+    </travel>
+</playerspawnpoints>
